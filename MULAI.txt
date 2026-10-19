@@ -1,0 +1,40 @@
+BISAM SIMPLE VERSION (v6.2 - digabung & dirapikan)
+
+Update terbaru:
+- 550 soal baru (11 modul: logika, numerik, verbal, sinonim, analogi, deret,
+  matematika, analitis, spasial, konsentrasi, kepribadian) digabung dari
+  paket soal_gabungan, menggantikan file bank soal yang sebelumnya kosong.
+- Bank soal TIU/TWK/TKD & Ketelitian (Pencerminan Gambar) diperbaiki formatnya
+  supaya benar-benar tampil dan bisa dinilai (sebelumnya field-nya tidak
+  cocok dengan halaman kuis).
+- Katalog modul yang sebelumnya ada 2 versi berbeda (dan saling tidak
+  nyambung dengan bank soal) disatukan jadi satu sumber: src/data/modules.data.js
+- Fitur Pauli & Kraepelin dan Tes Ketelitian yang sebelumnya tidak
+  ter-routing (tidak bisa diakses dari menu manapun) sekarang sudah aktif.
+- Halaman kuis sekarang menampilkan gambar soal (untuk modul Ketelitian) dan
+  pembahasan jawaban.
+- Backend Firebase: firebase.repository.js sekarang implementasi Firestore
+  yang berfungsi (bukan stub kosong), plus script scripts/seed-firebase.mjs
+  untuk mengirim seluruh konten ke Firestore project kamu.
+
+Dipertahankan:
+- Tampilan BISAM
+- Modul latihan
+- Modul ujian
+- Pencerminan
+- TIU/TWK/TKD
+- Struktur data
+- Firebase/config yang ada
+
+Dihapus dari paket:
+- node_modules
+- dokumentasi lama
+- changelog lama
+
+Cara menjalankan (mode lokal/mock, tanpa Firebase):
+1. npm install
+2. npm run dev
+3. Buka http://localhost:5173
+
+Cara mengirim konten ke Firebase:
+Baca src/firebase/README.md bagian "Mengirim (seed) data ke Firestore project kamu".
